@@ -1,23 +1,38 @@
 <?php
 
-$paragrafo = "C'è un prete e una suora che vanno a giocare a golf. La suora, porta l'occorrente per il prete. Il prete tira e dice: 
-- Cazzo, ho sbagliato mira -
-- Ma padre, lei non può dire le parolacce - dice la suora.
-- Mi perdoni sorella, se dico un'altra parolaccia che il Signore mi fulmini!!-
-Il prete tira una seconda volta e dice:
--  Cazzo, ho sbagliato mira-
-- Ma padre, lei non può dire le parolacce- dice la suora.
-- Mi perdoni sorella, se dico un'altra parolaccia che il Signore mi fulmini!!-
-Dopo quelle parole, si aprì il cielo e partì un fulmine che seccò la suora e si sente dire dal cielo:
-Cazzo!!!HO SBAGLIATO MIRA!!!!";
+$paragrafo = "Dietro il palazzo c'è un povero cane pazzo, chi darà un pezzo di pane a quel povero pazzo cane. Sopra al terrazzo, c'è un cane pazzo, te' pazzo cane, sto pezzo di pane. Dentro quel palazzo c'è un povero cane pazzo, date un pezzo di pane a quel povero pazzo cane.";
 
+$badWord = $GET["badword"];
 
-var_dump($paragrafo);
+?>
 
-echo strlen($paragrafo);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+       <?php   
+       
+       echo $testo;
+       echo "<br>";
+       echo strlen($testo);
+       
+       ?>
+    </p>
 
-echo "<br>";
-echo "<br>";
+    <p>
+    
+    <?php   
+     
+     echo str_replace($badword, "***" ,$testo)
+    
+    ?>
 
-echo str_replace("Cazzo", "C***o", $paragrafo);
-
+    </p>
+</body>
+</html>
