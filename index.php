@@ -2,8 +2,8 @@
 
 $paragrafo = "Dietro il palazzo c'è un povero cane pazzo, chi darà un pezzo di pane a quel povero pazzo cane. Sopra al terrazzo, c'è un cane pazzo, te' pazzo cane, sto pezzo di pane. Dentro quel palazzo c'è un povero cane pazzo, date un pezzo di pane a quel povero pazzo cane.";
 
-$badWord = $GET["badword"] ? $_GET["badword"]: "";
-
+$badWord = array_key_exists ("badword", $_GET) ? $_GET["badword"]: "";
+$testoModificato = str_replace($badword, "***", $testo);
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +30,6 @@ $badWord = $GET["badword"] ? $_GET["badword"]: "";
     <p>
 
         <?php
-
-        $testoModificato = str_replace($badword, "***", $testo);
 
         echo $testoModificato;
         echo "<br>";
